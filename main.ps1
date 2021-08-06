@@ -1,3 +1,5 @@
+Add-LocalGroupMember -Group "Administrators" -Member "OLA_Admin"
+
 Invoke-WebRequest -Uri "https://ftp.hp.com/pub/softpaq/sp97001-97500/sp97111.exe" -Outfile "C:\windows\Temp\chipset_drivers.pdf"
 Invoke-WebRequest -Uri "https://ftp.hp.com/pub/softpaq/sp113501-114000/sp113551.exe" -Outfile "C:\windows\Temp\audio_drivers.pdf"
 Invoke-WebRequest -Uri "https://ftp.hp.com/pub/softpaq/sp113501-114000/sp113697.exe" -Outfile "C:\windows\Temp\video_drivers.pdf"
@@ -36,9 +38,9 @@ Write-Host "Installing Hotkey drivers (2)..."
 Start-Process -Wait -FilePath "C:\windows\Temp\hotkey_drivers(2).exe" -ArgumentList "/s"
 Write-Host "Hotkey drivers (2) installed."
 
-Remove-Item C:\windows\Temp\chipset_drivers.exe
-Remove-Item C:\windows\Temp\audio_drivers.exe
-Remove-Item C:\windows\Temp\video_drivers.exe
-Remove-Item C:\windows\Temp\wlan_drivers.exe
-Remove-Item C:\windows\Temp\hotkey_drivers.exe
-Remove-Item C:\windows\Temp\hotkey_drivers(2).exe
+# Remove-Item C:\windows\Temp\chipset_drivers.exe
+# Remove-Item C:\windows\Temp\audio_drivers.exe
+# Remove-Item C:\windows\Temp\video_drivers.exe
+# Remove-Item C:\windows\Temp\wlan_drivers.exe
+# Remove-Item C:\windows\Temp\hotkey_drivers.exe
+# Remove-Item C:\windows\Temp\hotkey_drivers(2).exe
