@@ -1,11 +1,28 @@
 Add-LocalGroupMember -Group "Administrators" -Member "OLA_Admin"
 
+Write-Host "Downloading Chipset drivers..."
 Invoke-WebRequest -Uri "https://ftp.hp.com/pub/softpaq/sp97001-97500/sp97111.exe" -Outfile "C:\windows\Temp\chipset_drivers.pdf"
+Write-Host "Chipset drivers downloaded."
+
+Write-Host "Downloading audio drivers..."
 Invoke-WebRequest -Uri "https://ftp.hp.com/pub/softpaq/sp113501-114000/sp113551.exe" -Outfile "C:\windows\Temp\audio_drivers.pdf"
+Write-Host "Audion drivers downloaded."
+
+Write-Host "Downloading video drivers..."
 Invoke-WebRequest -Uri "https://ftp.hp.com/pub/softpaq/sp113501-114000/sp113697.exe" -Outfile "C:\windows\Temp\video_drivers.pdf"
+Write-Host "Video drivers downloaded."
+
+Write-Host "Downloading WLAN drivers..."
 Invoke-WebRequest -Uri "https://ftp.hp.com/pub/softpaq/sp113001-113500/sp113020.exe" -Outfile "C:\windows\Temp\wlan_drivers.pdf"
+Write-Host "WLAN drivers downloaded"
+
+Write-Host "Downloading Hotkey drivers (1)..."
 Invoke-WebRequest -Uri "https://ftp.hp.com/pub/softpaq/sp112001-112500/sp112462.exe" -Outfile "C:\windows\Temp\hotkey_drivers.pdf"
+Write-Host "Hotkey drivers (1) downloaded"
+
+Write-Host "Downloading Hotkey drivers (2)..."
 Invoke-WebRequest -Uri "https://ftp.hp.com/pub/caps-softpaq/cmit/softpaq/CASLSetup.exe" -OutFile "C:\windows\Temp\hotkey_drivers(2).pdf"
+Write-Host "Hotkey drivers (2) downloaded"
 
 Rename-Item -Path "C:\windows\Temp\chipset_drivers.pdf" -NewName "chipset_drivers.exe"
 Rename-Item -Path "C:\windows\Temp\audio_drivers.pdf" -NewName "audio_drivers.exe"
