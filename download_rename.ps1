@@ -1,0 +1,11 @@
+Invoke-WebRequest -Uri "https://ftp.hp.com/pub/softpaq/sp97001-97500/sp97111.exe" -Outfile "chipset_drivers.pdf"
+Invoke-WebRequest -Uri "https://ftp.hp.com/pub/softpaq/sp113501-114000/sp113551.exe" -Outfile "audio_drivers.pdf"
+Invoke-WebRequest -Uri "https://ftp.hp.com/pub/softpaq/sp113501-114000/sp113697.exe" -Outfile "video_drivers.pdf"
+Invoke-WebRequest -Uri "https://ftp.hp.com/pub/softpaq/sp113001-113500/sp113020.exe" -Outfile "wlan_drivers.pdf"
+Invoke-WebRequest -Uri "https://ftp.hp.com/pub/softpaq/sp112001-112500/sp112462.exe" -Outfile "hotkey_drivers.pdf"
+
+Rename-Item -Path "chipset_drivers.pdf" -NewName "chipset_drivers.exe"
+Rename-Item -Path "audio_drivers.pdf" -NewName "audio_drivers.exe"
+Rename-Item -Path "video_drivers.pdf" -NewName "video_drivers.exe"
+Rename-Item -Path "wlan_drivers.pdf" -NewName "wlan_drivers.exe"
+Rename-Item -Path "hotkey_drivers.pdf" -NewName "hotkey_drivers.exe"
